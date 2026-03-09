@@ -122,7 +122,6 @@ function Index() {
     const container = document.querySelector(".modal-conatiner");
     container.appendChild(renderer.domElement);
 
-    // Make sure the canvas fills and is visible
     renderer.domElement.style.position = "absolute";
     renderer.domElement.style.top = "0";
     renderer.domElement.style.left = "0";
@@ -171,7 +170,7 @@ function Index() {
       "/shaker.glb",
       (gltf) => {
         model = gltf.scene;
-        console.log("GLB loaded:", model);
+        // console.log("GLB loaded:", model);
 
         model.traverse((node) => {
           if (node.isMesh && node.material) {
@@ -184,7 +183,7 @@ function Index() {
 
         const box = new THREE.Box3().setFromObject(model);
         modelSize = box.getSize(new THREE.Vector3());
-        console.log("Model size:", modelSize);
+        // console.log("Model size:", modelSize);
 
         if (modelSize.length() === 0) {
           console.warn("Model size is zero — check your GLB file");
@@ -193,7 +192,7 @@ function Index() {
 
         scene.add(model);
         setupModel();
-        console.log("Camera position after setup:", camera.position);
+        // console.log("Camera position after setup:", camera.position);
       },
       (xhr) => {
         if (xhr.total > 0) {
@@ -303,7 +302,7 @@ function Index() {
       </section>
       <section className="product-overview">
         <div className="header-1">
-          <h1>Peak Performance Begins With</h1>
+          <h1>Peak Performance Begins</h1>
         </div>
         <div className="header-2">
           <h1>APEX Shaker</h1>
