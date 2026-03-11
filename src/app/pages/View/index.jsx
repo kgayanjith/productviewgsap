@@ -33,7 +33,6 @@ function Index() {
     });
     gsap.ticker.lagSmoothing(0);
 
-    // ── SplitText ────────────────────────────────────────────────────────────
     const header1Split = new SplitText(".header-1 h1", {
       type: "chars",
       charsClass: "char",
@@ -302,10 +301,10 @@ function Index() {
       </section>
       <section className="product-overview">
         <div className="header-1">
-          <h1>Peak Performance Begins</h1>
+          <h1>Peak Performance Begins.</h1>
         </div>
         <div className="header-2">
-          <h1>APEX Shaker</h1>
+          <h1>APEX Shaker.</h1>
         </div>
         <div className="circular-mask"></div>
         <div className="tooltips">
